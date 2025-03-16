@@ -1,0 +1,60 @@
+Student class: ID (key), name, grade (double)
+
+MyBSTree<Student>: BST using ID comparisons
+
+Main app: File I/O + menu loop
+
+Key Implementation Points
+
+File Import - 
+
+Immediate exit if file missing → exact error msg
+
+Parse lines: ID(int), first+last name, grade(double)
+
+Store as Student objects in BST
+
+Menu System - 
+
+Loop until exit (choice 6)
+
+Switch-case for options 1-5
+
+Input prompts must match spec exactly
+
+BST Operations - 
+
+Insert: auto-sort by ID, reject duplicates
+
+Search: for display/update (by ID)
+
+Min/Max grade: linear search required (not BST property)
+
+Critical Checks
+- Student ID validation (numeric input)
+- Grade formatting (XX.X% output)
+- Name handling: first + last → full name
+- Size updates only on successful adds
+
+Error Handling -
+
+File not found: exact match "Error: File Not Found."
+
+ID not found: "Error - Student ID Not Found! "
+
+Update flow: show record → prompt new grade → update
+
+Tested Scenarios
+- Empty roster → add new student
+- Update existing grade → verify changes
+- High/Low grade with tiebreakers
+- Mixed-case names in file input
+- Grade precision (78.4% not 78.40%)
+
+OOP Design
+
+Separate classes for BST/Student/App
+
+Helper methods for traversal/search
+
+Encapsulated student data

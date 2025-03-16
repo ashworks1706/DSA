@@ -1,0 +1,51 @@
+
+Class Structure  
+- MyBSTree implements ITree  
+- Private Node root  
+- Private int size  
+- Inner Node class (package-private)  
+
+Node Class  
+- Public T data  
+- Public Node left (init null)  
+- Public Node right (init null)  
+- Constructor sets data  
+- Recursive insert method handles comparisons  
+
+Insert Logic  
+1. Empty tree: create root node  
+2. Existing tree: delegate to root.insert()  
+3. Compare using item.compareTo()  
+4. Left if   
+5. Duplicates: return without size change  
+6. Increment size only on successful add  
+
+ContainsItem  
+- Recursive search starting at root  
+- Similar comparison logic to insert  
+
+Traversal  
+- In-order: left -> root -> right  
+- Used for both printInOrder() and toString()  
+- Space-separated values  
+- Trim trailing space in toString()  
+
+Key Checks  
+- Size updates correctly after inserts  
+- Proper null handling for empty tree  
+- Left/right placement validation  
+- Duplicate rejection  
+- String formatting matches specs  
+
+Tested Cases  
+- Empty tree (size 0)  
+- Single node insertion  
+- Multi-level insertions  
+- Duplicate rejection  
+- Contains checks for existing/missing items  
+
+Implementation Reminders  
+- No java.util.* imports used  
+- Node class must be package-private  
+- All methods implemented as per UML  
+- Original 94/100 solution structure  

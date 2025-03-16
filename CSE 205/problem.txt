@@ -1,0 +1,55 @@
+
+BST = No duplicates, left < parent < right
+
+Generic type T must use compareTo() for checks
+
+Node class handles recursive insert/search
+
+Size counter must update ONLY on successful adds
+
+Critical -
+
+Insert Logic
+
+Empty tree? Create root
+
+Else: root.insert(item) with recursive node navigation
+
+Duplicates abort insert (no size change)
+
+Node Structure -
+
+Package-level inner class (no public/private)
+
+Data + left/right child pointers
+
+Recursive insert handles comparisons
+
+Traversal -
+
+In-order = left -> root -> right sequence
+
+Used for both printInOrder() and toString()
+
+Watch For
+- Null root edge cases
+- Proper left/right child assignments
+- Size increments only on valid inserts
+- String output formatting (spaces between values)
+
+Testing Hotspots -
+
+Empty tree → size 0
+
+Duplicate rejection
+
+Multi-level insertions (grandchild nodes)
+
+ContainsItem() for missing/existing values
+
+Key Restrictions
+- No java.util.* imports
+- Absolute no-go: copied code
+- Must be 100% original work
+
+

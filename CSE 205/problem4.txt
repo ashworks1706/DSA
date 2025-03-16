@@ -1,0 +1,38 @@
+Core Implementation
+- MergeSort operates on `IList` via 5 required methods
+- Recursive divide-and-conquer pattern
+- Split lists using getLeftHalf/getRightHalf
+- Merge sorted sublists in O(n) time
+
+Critical Implementation -
+1. List Splitting  
+   - Left half: floor(n/2) elements  
+   - Right half: ceiling(n/2) elements  
+   - Odd-length lists: left gets smaller half  
+
+2. Merge Logic  
+   - Compare heads of sorted sublists  
+   - Append smaller element to new list  
+   - Handle remaining elements after exhaustion  
+
+3. Recursive Flow  
+   - Base case: list size ≤ 1  
+   - Split → sort halves → merge results  
+
+*Key Checks*  
+- No java.util.* imports used  
+- Helper methods return new IList objects  
+- Original list modified in mergesort() via clear/addAll  
+- Stable sorting preserved during merge  
+
+*Tested Edge Cases*  
+- Empty lists  
+- Single-element lists  
+- Odd/even length splits  
+- Duplicate values  
+- Already sorted/rev-sorted lists  
+
+*Performance Notes*  
+- O(n log n) time complexity  
+- O(n) space complexity  
+- Stable sort (preserves equal elements' order)  

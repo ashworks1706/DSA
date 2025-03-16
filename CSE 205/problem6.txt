@@ -1,0 +1,43 @@
+
+Instance Variables  
+- private int capacity  
+- private int length  
+- private char[] data  
+
+Constructors  
+1. Default: initializes all fields to defaults  
+2. int param: capacity setup (exact use TBD)  
+3. String param: future string storage  
+
+Key Methods  
+- charAt(int): returns char (stub returns 0)  
+- concat(MyString): void method (empty body)  
+- equals(MyString): boolean (stub returns false)  
+- indexOf(MyString): int (stub returns 0)  
+- length(): returns int (stub returns 0)  
+- makeCapacity(int): void (empty body)  
+- store() overloads: void methods (empty bodies)  
+- substring(int, int): MyString (stub returns null)  
+- toString(): String (stub returns null)  
+
+Implementation Rules  
+- All void methods have empty bodies  
+- Non-void methods return type defaults:  
+  - 0 for numeric/char  
+  - false for boolean  
+  - null for objects  
+- No method logic implemented yet (pre-lab structure only)  
+- No external libraries beyond standard Java  
+
+Validation Points  
+- Correct constructor signatures  
+- Exact method parameter types  
+- Proper return types  
+- Private field declarations  
+- No extra fields/methods added  
+
+Testing Success Factors  
+- All structure tests passed (fields/constructors/methods)  
+- Default initializations correct  
+- Method signatures match UML exactly  
+- No compilation errors  
