@@ -8,6 +8,12 @@
 * [X] insertion sort
 * [X] selection sort
 * [X] bubble sort
-* [X] bucket sort
-* [X] backtracking
-* [X] dynamic prg
+* [ ] depth first
+* [ ] breadth first
+* [ ] height of tree
+* [ ] tree find
+* [ ] recrusion pallindrome, odd sum
+* [ ] bucket sort
+* [ ] radix sort
+* [ ] backtracking
+* [ ] dynamic prg
