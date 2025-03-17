@@ -8,6 +8,6 @@
 * [X] insertion sort
 * [X] selection sort
 * [X] bubble sort
-* [X] hashmap bucket
+* [X] bucket sort
 * [X] backtracking
 * [X] dynamic prg
