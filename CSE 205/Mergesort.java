@@ -13,7 +13,7 @@ class MergeSort{
             mergeSort(list, mid+1,right);
             
             final_list = merge(list, left, mid, right);
-            
+             
         }
         return final_list;
     }

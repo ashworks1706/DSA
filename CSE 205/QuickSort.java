@@ -7,9 +7,9 @@ class QuickSort{
     }
     public static void sort(int[] arr, int low, int high) {
         if (low < high) {
-            int pi = partition(arr, low, high); // we create partitions by this for passed left and right index
-            sort(arr, low, pi-1); // we do this for sorting left part of array
-            sort(arr, pi+1, high); // we do this for sorting right part of array
+            int pivot = partition(arr, low, high); // we create partitions by this for passed left and right index
+            sort(arr, low, pivot-1); // we do this for sorting left part of array
+            sort(arr, pivot+1, high); // we do this for sorting right part of array
         }
     }
     
