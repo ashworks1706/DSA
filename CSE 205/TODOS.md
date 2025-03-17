@@ -8,11 +8,11 @@
 * [X] insertion sort
 * [X] selection sort
 * [X] bubble sort
-* [ ] depth first
-* [ ] breadth first
-* [ ] height of tree
-* [ ] tree find
-* [ ] recrusion pallindrome, odd sum
+* [X] depth first
+* [X] breadth first
+* [X] height of tree
+* [X] tree find
+* [X] recrusion pallindrome, odd sum
 * [ ] bucket sort
 * [ ] radix sort
 * [ ] backtracking
