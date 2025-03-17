@@ -5,9 +5,9 @@
 * [X] binary search
 * [X] stack
 * [X] queue
-* [X] hashmap bucket
-* [X] backtracking
-* [X] dynamic prg
 * [X] insertion sort
 * [X] selection sort
 * [X] bubble sort
+* [X] hashmap bucket
+* [X] backtracking
+* [X] dynamic prg
