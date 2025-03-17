@@ -1,98 +1,137 @@
+class Main{
+    public static void main (String [] args){
+        BinaryTree tree = new BinaryTree();
 
-public class MyBSTree<T extends Comparable<T>> implements ITree<T> {
-    private Node root;
-    private int size;  
-    
-    class Node {
-        public T data;
-        public Node left;  
-        public Node right; 
-        
-        public Node(T data) {
-            this.data = data;
-            this.left = null;  
-            this.right = null;
-        }
-        
-        public void insert(T item) {
-            int compareResult = item.compareTo(data);
-            
-            if (compareResult == 0) { 
-                return;
-            } else if (compareResult < 0) {  
-                if (left == null) {
-                    left = new Node(item);
-                    size++;  
-                } else {
-                    left.insert(item);  
-                }
-            } else {  // Go right
-                if (right == null) {
-                    right = new Node(item);
-                    size++;
-                } else {
-                    right.insert(item);  
-                }
-            }
-        }
-    }
-    
-    @Override
-    public void insert(T item) {
-        if (root == null) {  
-            root = new Node(item);
-            size = 1;  
-        } else {
-            root.insert(item);  
-        }
-    }
-    
-    @Override
-    public boolean containsItem(T item) {
-        return containsItemHelper(root, item);
-    }
-    
-    private boolean containsItemHelper(Node node, T item) {
-        if (node == null) return false;  
-        
-        int cmp = item.compareTo(node.data);
-        if (cmp == 0) return true;
-        return cmp < 0 
-            ? containsItemHelper(node.left, item)  
-            : containsItemHelper(node.right, item); 
-    }
-    
-    @Override
-    public int getSize() {
-        return size; 
-    }
-    
-    @Override
-    public void printInOrder() {
-        printInOrderHelper(root);
-        System.out.println(); 
-    }
-    
-    private void printInOrderHelper(Node node) {
-        if (node != null) {
-            printInOrderHelper(node.left);
-            System.out.print(node.data + " "); 
-            printInOrderHelper(node.right);
-        }
-    }
-    
-    @Override
-    public String toString() {
-        StringBuilder result = new StringBuilder();
-        toStringHelper(root, result);
-        return result.toString().trim(); 
-    }
-    
-    private void toStringHelper(Node node, StringBuilder sb) {
-        if (node != null) {
-            toStringHelper(node.left, sb);
-            sb.append(node.data).append(" "); 
-            toStringHelper(node.right, sb);
-        }
+        tree.insert(new Node(5));
+        tree.insert(new Node(51));
+        tree.insert(new Node(32));
+        tree.insert(new Node(212));
+        tree.insert(new Node(12));
+        tree.insert(new Node(1));
+        tree.display();
+        System.out.println(tree.search(1));
+        tree.remove(1);
+        tree.display();
+        System.out.println(tree.search(1));
     }
 }
+
+public class Node{
+    int data;
+    Node left;
+    Node right;
+
+    public Node(int data){
+        this.data = data;
+    }
+}
+
+
+// a binary tree will always have left of root small and right of root larger
+public class BinaryTree{
+    Node root;
+
+    public void insert(Node node){
+        root = insertHelper(root, node);
+    }
+    private Node insertHelper(Node root, Node node){
+        int data = node.data;
+        if(root == null){
+            root = node;
+            return root;
+        }
+        else if(data<root.data){
+            root.left = insertHelper(root.left, node);
+        }
+        else{
+            root.right = insertHelper(root.right, node);
+        }
+        return root;
+    }
+    public void display(){
+        displayHelper(root);   
+    }
+    public void displayHelper(Node root){
+        
+        if(root!=null){
+            displayHelper(root.left);
+            System.out.println(root.data);
+            displayHelper(root.right);
+        }
+    }
+    public boolean search(int data){
+        return searchHelper(root,data);
+    }
+    private boolean searchHelper(Node root, int data){
+        if(root==null){
+            return false;
+        }
+        else if(root.data == data){
+            return true;
+        }
+        else if(data<root.data){
+            return searchHelper(root.left, data);
+        }
+        else{
+            return searchHelper(root.right, data);
+        }
+
+    }
+    
+    public Node remove(int data){
+        if(search(data)){
+            return removeHelper(root, data);
+        }
+        else{
+            System.out.println("data not found");
+            return root;
+        }
+    }
+    private Node removeHelper(Node root, int data){
+        if(root == null){
+            return root;
+        }
+        
+        else if(data < root.data){
+            root.left = removeHelper(root.left, data);
+        }
+        else if(data > root.data){
+            root.right = removeHelper(root.right, data);
+        }
+        else{
+            if(root.left == null && root.right == null){
+                root = null;
+            }
+            else if(root.right != null){
+                // find successor 
+                root.data = successor(root);
+                root.right = removeHelper(root.right, root.data);
+            }
+            else{
+                // find predecessor
+                root.data = predecessor(root);
+                root.left = removeHelper(root.left, root.data);
+            }
+        }
+    
+        return root;
+    }
+    private int successor(Node root){ // finding the least value below the right child of his root node
+
+        root = root.right;
+        while(root.left!=null){
+            root = root.left;
+        }
+        return root.data;
+        
+    }
+    private int predecessor(Node root){
+        // finding the least value below the left child of his root node
+        root = root.left;
+        while(root.right!=null){
+            root = root.right;
+        }
+        return root.data;
+    }
+}
+

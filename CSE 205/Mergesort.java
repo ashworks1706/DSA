@@ -14,8 +14,6 @@ class MergeSort{
             
             final_list = merge(list, left, mid, right);
             
-
-
         }
         return final_list;
     }

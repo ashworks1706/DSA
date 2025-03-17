@@ -1,13 +1,13 @@
 * [X] single linkedlist
 * [X] Merge sort
-* [ ] quick sort
-* [ ] binary tree search
-* [ ] binary search
-* [ ] stack
-* [ ] queue
-* [ ] hashmap bucket
-* [ ] backtracking
-* [ ] dynamic prg
-* [ ] insertion sort
-* [ ] selection sort
-* [ ] bubble sort
+* [X] quick sort
+* [X] binary tree search
+* [X] binary search
+* [X] stack
+* [X] queue
+* [X] hashmap bucket
+* [X] backtracking
+* [X] dynamic prg
+* [X] insertion sort
+* [X] selection sort
+* [X] bubble sort
