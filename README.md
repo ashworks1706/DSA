@@ -1,4 +1,4 @@
-All my Data Structures Notes and Code throughout all courses [here](github.com/ashworks1706/DSA).
+All my Data Structures Notes and Code throughout all courses [here](https://github.com/ashworks1706/DSA/tree/main/Notes).
 
 ## Here's a list of important topics in universal Data Structures-
 ### Consider spending most of the time on these topics  
