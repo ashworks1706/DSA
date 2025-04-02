@@ -1,4 +1,4 @@
-nums = [-1,0,1,2,3]
+num = [-1,0,1,2,3]
 result=[]
 for i in nums:
     prod=1
