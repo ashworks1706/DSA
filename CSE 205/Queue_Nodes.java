@@ -1,6 +1,6 @@
-public class Main {
+public class Queue_Nodes {
     public static void main(String[] args) {
-        Queue queue = new Queue();
+         Queue queue = new  Queue();
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
@@ -27,10 +27,10 @@ class Node {
     }
 }
 
-class Queue {
+class  Queue {
     Node head;
 
-    Queue() {
+     Queue() {
         this.head = null;
     }
 

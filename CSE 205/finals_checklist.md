@@ -1,5 +1,26 @@
 # CSE 205 Finals Todo List
-## Sorting Algorithms
+
+## Data Structures (Nodes + List)
+
+- [ ] Stack (Nodes + List)
+- [ ] Queue (Nodes + List)
+- [ ] LinkedList (List)
+- [ ] Recursion (Nodes + List)
+
+## Searching Algorithms (List)
+
+- [ ] Binary Search
+- [ ] Linear Search
+
+## Binary Trees (Nodes)
+
+- [ ] Binary tree search
+- [ ] Height of tree
+- [ ] Depth first search
+- [ ] Breadth first search
+
+## Sorting Algorithms (List)
+
 - [ ] Insertion sort
 - [ ] Selection sort
 - [ ] Bubble sort
@@ -7,16 +28,3 @@
 - [ ] Quick sort
 - [ ] Bucket sort
 - [ ] Radix sort
-## Data Structures
-- [ ] Stack
-- [ ] Queue
-- [ ] LinkedList
-- [ ] Recursion
-## Searching Algorithms
-- [ ] Binary Search
-- [ ] Linear Search
-## Binary Trees
-- [ ] Binary tree search
-- [ ] Height of tree
-- [ ] Depth first search
-- [ ] Breadth first search 
