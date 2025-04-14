@@ -2,14 +2,13 @@
 
 ## Data Structures (Nodes + List)
 
-- [ ] Stack (Nodes + List)
-- [ ] Queue (Nodes + List)
-- [ ] LinkedList (List)
-- [ ] Recursion (Nodes + List)
+- [ ] Stack
+- [ ] Queue
+- [ ] LinkedList
+- [ ] Recursion
 
-## Searching Algorithms (List)
+## Searching Algorithms (List)Binary Search
 
-- [ ] Binary Search
 - [ ] Linear Search
 
 ## Binary Trees (Nodes)

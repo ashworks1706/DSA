@@ -1,6 +1,6 @@
-class Main{
+public class BinaryTree{
     public static void main (String [] args){
-        BinaryTree tree = new BinaryTree();
+        Main tree = new Main();
 
         tree.insert(new Node(5));
         tree.insert(new Node(51));
@@ -16,7 +16,7 @@ class Main{
     }
 }
 
-public class Node{
+class Node{
     int data;
     Node left;
     Node right;
@@ -28,7 +28,7 @@ public class Node{
 
 
 // a binary tree will always have left of root small and right of root larger
-public class BinaryTree{
+class Main{
     Node root;
 
     public void insert(Node node){

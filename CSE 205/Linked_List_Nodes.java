@@ -1,6 +1,5 @@
-import java.util.*;
 
-class Main {
+class Linked_List_Nodes {
     public static void main(String[] args) {  // Corrected main method signature
         // create node
         Node head = new Node(5);
